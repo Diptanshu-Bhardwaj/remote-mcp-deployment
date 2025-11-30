@@ -4,9 +4,9 @@ import sqlite3
 import tempfile
 
 # Use OS temp directory to ensure write access
-TEMP_DIR = tempfile.gettempdir()
-DB_PATH = os.path.join(TEMP_DIR, "expenses.db")
-CATEGORIES_PATH = os.path.join(os.path.dirname(__file__), "categories.json")
+BASE_DIR = os.path.dirname(__file__)
+DB_PATH = os.path.join(BASE_DIR, "expenses.db")
+CATEGORIES_PATH = os.path.join(BASE_DIR, "categories.json")
 
 print(f"Database path: {DB_PATH}")
 
